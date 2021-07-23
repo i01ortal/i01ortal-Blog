@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://i01ortal.tk/2021/07/21/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210722101117861.png">
 <meta property="og:image" content="http://i01ortal.tk/2021/07/21/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210722193559202.png">
 <meta property="article:published_time" content="2021-07-21T16:52:28.000Z">
-<meta property="article:modified_time" content="2021-07-23T02:50:12.361Z">
+<meta property="article:modified_time" content="2021-07-23T03:18:29.699Z">
 <meta property="article:author" content="i01ortal">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
@@ -461,6 +461,14 @@
 
 <p>每次发布文章则需要执行下面命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>文章目录设置：</p>
+<p>在 custom.styl 文件中添加 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//文章目录默认展开</span><br><span class="line">.post-toc .nav .nav-child &#123; display: block; &#125;</span><br><span class="line">.post-toc ol &#123;  </span><br><span class="line">  font-size : 13px;     </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>点击中文目录无法跳转：</p>
+<p>修改 js/src/post-details.js 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 第75行下添加</span><br><span class="line">targetSelector = decodeURI(this.getAttribute(&#x27;href&#x27;)) //对获取到url重编码</span><br></pre></td></tr></table></figure>
 
 
       
