@@ -108,7 +108,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/i01ortal/Images/imgback/202209061420758.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/i01ortal/Images/imgback/202209061420682.png">
 <meta property="article:published_time" content="2022-09-06T06:26:17.000Z">
-<meta property="article:modified_time" content="2022-09-06T06:36:24.851Z">
+<meta property="article:modified_time" content="2022-09-06T07:00:16.090Z">
 <meta property="article:author" content="i01ortal">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
@@ -384,7 +384,7 @@
 </ul>
 <p>面临以上一些问题，Sign（签名）也被设计出来保护API接口数据的安全。更多应用厂商也开始意识到，很多应用系统已经开始采用验证签名的方法来保护，防止一些攻击，如 Replay attack （重放攻击），Data tampering（数据篡改）。</p>
 <p>但是加上Sign并不是说其它漏洞或者安全问题就不存在，还是需要我们进行渗透测试，验证系统是否安全，有防自然有攻，还是那句话，没有绝对安全的系统。</p>
-<!---more--->
+<span id="more"></span>
 
 <p>在应用系统加上签名后，进行Web端渗透测试时就面临了一些麻烦，不能重放，修改请求数据，使用 Sign 值的应用系统确实提高了一定的安全性，但是还是存在很大的安全隐患。 Sign 值在生成的过程中是在Web前端完成的，Web前端代码对我们可见，虽说大多数进行过混淆，但是只要去找，一定可以将应用系统 Sign 值生成方式逆向出来。</p>
 <h2 id="抓包分析"><a href="#抓包分析" class="headerlink" title="抓包分析"></a>抓包分析</h2><p>以下是对某个站点Sign值的逆向过程，如有错误请各位指正。</p>
